@@ -34,7 +34,6 @@ var removeElement = function (nums, val) {
 
   while ( i < j ) {
 	if (nums[i] === val) {
-		/* 因为本身题目要求不需要排序，所以可以大胆的把后面的元素放在前面 */
 		nums[i] = nums[j - 1]
 		j-- 
 	} else {
