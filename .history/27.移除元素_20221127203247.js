@@ -51,19 +51,6 @@ const removeElement = (nums, val) => {
   } else if (nums.length === 1) {
 	return nums[0] === val ? 0 : 1
   };
-
-  let left = 0, right = nums.length
-
-  while (left < right) {
-	if (nums[left] !== val) {
-		left++
-	} else {
-		nums[left] = nums[right - 1]
-		right--
-	}
-  }
-
-  return left
 }
 
 // @lc code=end

@@ -28,10 +28,10 @@
 
 
 const twoSum = (nums, target) => {
-
+    
     const map = new Map();
 
-    for (let i = 0; i < nums.length; i++) {
+    for (let i = 0; i < nums.length; i) {
 
         const val = nums[i]
 

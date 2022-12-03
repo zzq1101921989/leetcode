@@ -47,22 +47,12 @@
 
 var searchInsert = function(nums, target) {
 
-    let left = 0, right = nums.length - 1
+    let left = 0, right = num.length - 1
 
     while (left <= right) {
-
-        /* 直接循环太费事了，再加上有一个前提条件是有序的，更加可以通过二分查找来进行 */
-        /* right - left：代表的是起始位置到末尾位置中间的间隔个数，从而 / 2 得到中位数 */
-        const midIdx = Math.floor(left + (right - left) / 2)
-
-        if (nums[midIdx] < target) {
-            left = midIdx + 1
-        } else {
-            right = midIdx - 1
-        }
+        
     }
 
-    return left
 
 }
 

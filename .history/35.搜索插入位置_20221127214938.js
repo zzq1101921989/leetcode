@@ -47,7 +47,7 @@
 
 var searchInsert = function(nums, target) {
 
-    let left = 0, right = nums.length - 1
+    let left = 0, right = num.length - 1
 
     while (left <= right) {
 
@@ -56,9 +56,9 @@ var searchInsert = function(nums, target) {
         const midIdx = Math.floor(left + (right - left) / 2)
 
         if (nums[midIdx] < target) {
-            left = midIdx + 1
+            left += midIdx + 1
         } else {
-            right = midIdx - 1
+            right -= midIdx + 1
         }
     }
 

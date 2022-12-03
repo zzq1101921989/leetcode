@@ -58,7 +58,7 @@ const removeElement = (nums, val) => {
 	if (nums[left] !== val) {
 		left++
 	} else {
-		nums[left] = nums[right - 1]
+		nums[i] = nums[right - 1]
 		right--
 	}
   }
