@@ -27,7 +27,7 @@ var containsDuplicate = function(nums) {
 var containsDuplicate = function(nums) {
     nums.sort((a, b) => a - b); 
     for (let i = 0; i < nums.length; i++) {
-        // 先小到大排序，如果有重复的，那么他们之间肯定是相邻的关系
+        // 先排序，如果有重复的，那么他们之间肯定是相邻的关系
         if (nums[i] === nums[i + 1]) {
             return true;
         }
