@@ -26,7 +26,7 @@ var missingNumber1 = function(nums) {
  * @param {number[]} nums
  * @return {number}
  */
- var missingNumber2 = function(nums) {
+ var missingNumber = function(nums) {
 
     const n = nums.length;
 
