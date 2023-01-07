@@ -30,36 +30,20 @@ var findPairs = function(nums, k) {
 
 // @lc code=start
 /**
- * 排序 + 双指针 + Set结构去重
+ * 排序 + 双指针
  * @param {number[]} nums
  * @param {number} k
  * @return {number}
  */
-const findPairs2 = (nums, k) => {
-
-    /* 定义去重Set */
-    const res = new Set();
+cosnt findPairs = (nums, k) => {
 
     /* 定义常用变量 */
-    let i = 0, j = 1, n = nums.length
+    let i = 0, j = 0, res = 0, n = nums.length
 
-    /* 顺序排序 */
-    /* [1, 1, 3, 4, 5] */
-    nums.sort((a, b) => a - b)
 
-    /* 不一定每次都需要j++, 算是新学到的一个技巧 */
-    for (; j < n;) {    
-        if (nums[j] - nums[i] === k) {
-            res.add(nums[i])
-            i++
-            j++
-        } else if (nums[j] - nums[i] < k) {
-            j++
-        } else {
-            i++
-        }
-    }
-    return res.size;
+
+
+    return res;
 }
 // @lc code=end
 

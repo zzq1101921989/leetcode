@@ -11,22 +11,22 @@
  * @param {number} k
  * @return {number}
  */
-var findPairs = function(nums, k) {
-    /* 已知道数组中会有重复的值，但是差值为k的等式只能存在一个，所以考虑用Set结构去重 */
-    const numSet = new Set(), ans = new Set();
-    for (const num of nums) {
-        if (numSet.has(num - k)) {
-            ans.add(num)
-        }
-        if (numSet.has(num + k)) {
-            ans.add(num + k)
-        }
-        /* 塞进Set结构中，并去重 */
-        numSet.add(num)
-    }
+// var findPairs = function(nums, k) {
+//     /* 已知道数组中会有重复的值，但是差值为k的等式只能存在一个，所以考虑用Set结构去重 */
+//     const numSet = new Set(), ans = new Set();
+//     for (const num of nums) {
+//         if (numSet.has(num - k)) {
+//             ans.add(num)
+//         }
+//         if (numSet.has(num + k)) {
+//             ans.add(num + k)
+//         }
+//         /* 塞进Set结构中，并去重 */
+//         numSet.add(num)
+//     }
 
-    return ans.size
-};
+//     return ans.size
+// };
 
 // @lc code=start
 /**
@@ -35,7 +35,7 @@ var findPairs = function(nums, k) {
  * @param {number} k
  * @return {number}
  */
-const findPairs2 = (nums, k) => {
+cosnt findPairs = (nums, k) => {
 
     /* 定义去重Set */
     const res = new Set();
@@ -47,7 +47,6 @@ const findPairs2 = (nums, k) => {
     /* [1, 1, 3, 4, 5] */
     nums.sort((a, b) => a - b)
 
-    /* 不一定每次都需要j++, 算是新学到的一个技巧 */
     for (; j < n;) {    
         if (nums[j] - nums[i] === k) {
             res.add(nums[i])

@@ -47,7 +47,6 @@ const findPairs2 = (nums, k) => {
     /* [1, 1, 3, 4, 5] */
     nums.sort((a, b) => a - b)
 
-    /* 不一定每次都需要j++, 算是新学到的一个技巧 */
     for (; j < n;) {    
         if (nums[j] - nums[i] === k) {
             res.add(nums[i])
